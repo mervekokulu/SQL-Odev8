@@ -2,15 +2,15 @@
 
 1. test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
 
-`CREATE TABLE employee (`<br>
-`   id INTEGER PRIMARY KEY`<br>
-`   name VARCHAR(50)`<br>
-`   email VARCHAR(100)`<br>
-`   birthday DATE);`
+CREATE TABLE employee (
+   id INTEGER PRIMARY KEY
+   name VARCHAR(50)
+   email VARCHAR(100)
+   birthday DATE);
 
 2. Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
-`insert into MOCK_DATA (email, name, birthday) values ('thamshar0@blinklist.com', 'Thatch Hamshar', '1989-08-22');
+insert into MOCK_DATA (email, name, birthday) values ('thamshar0@blinklist.com', 'Thatch Hamshar', '1989-08-22');
 insert into MOCK_DATA (email, name, birthday) values ('jsmowton1@biblegateway.com', 'Jeanine Smowton', '1980-06-19');
 insert into MOCK_DATA (email, name, birthday) values ('cfitton2@arstechnica.com', 'Cacilia Fitton', '1980-05-31');
 insert into MOCK_DATA (email, name, birthday) values ('vvan3@1und1.de', 'Vinnie Van Dalen', '1942-10-30');
@@ -59,7 +59,60 @@ insert into MOCK_DATA (email, name, birthday) values ('dtrosdall19@thetimes.co.u
 insert into MOCK_DATA (email, name, birthday) values ('tphette1a@theatlantic.com', 'Tobie Phette', '1995-05-14');
 insert into MOCK_DATA (email, name, birthday) values ('jchriston1b@ovh.net', 'Jobie Christon', '1985-07-31');
 insert into MOCK_DATA (email, name, birthday) values ('tadacot1c@amazon.co.uk', 'Theodore Adacot', '1970-06-21');
-insert into MOCK_DATA (email, name, birthday) values ('hgofforth1d@nbcnews.com', 'Harry Gofforth', '1936-02-06');`
+insert into MOCK_DATA (email, name, birthday) values ('hgofforth1d@nbcnews.com', 'Harry Gofforth', '1936-02-06');
 
 3. Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+
+UPDATE employee
+	SET name = 'ahuha aa',
+	email = 'asd.com',
+	birthday = '1983-01-01'
+WHERE id = 10;
+
+UPDATE employee
+	SET name = 'aaa bb',
+	email = 'fgh.com',
+	birthday = '1963-09-04'
+WHERE id = 11;
+
+UPDATE employee
+	SET name = 'ccc dd',
+	email = 'jkl.com',
+	birthday = '1976-02-15'
+WHERE id = 18;
+
+UPDATE employee
+	SET name = 'ddd eeee',
+	email = 'cvbn.com',
+	birthday = '1991-04-07'
+WHERE id = 22;
+
+UPDATE employee
+	SET name = 'eeee fff',
+	email = 'zxcv.com',
+	birthday = '1974-03-02'
+WHERE id = 25;
+
 4. Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+
+DELETE FROM employee
+WHERE id = 7;
+RETURNING *;
+
+DELETE FROM employee
+WHERE name = 'Jasper Godball';
+RETURNING *;
+
+DELETE FROM employee
+WHERE birthday = '1938-09-06';
+RETURNING *;
+
+DELETE FROM employee
+WHERE email = 'ddmitrichenkoo@jugem.jp';
+RETURNING *;
+
+DELETE FROM employee
+WHERE id = 19;
+RETURNING *;
+
+
