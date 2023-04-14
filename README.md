@@ -7,6 +7,8 @@ CREATE TABLE employee (
    name VARCHAR(50)
    email VARCHAR(100)
    birthday DATE);
+   
+--
 
 -- Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
