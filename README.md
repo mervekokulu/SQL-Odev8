@@ -1,6 +1,6 @@
 # SQL-Odev8
 
-1. test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+--test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
 
 CREATE TABLE employee (
    id INTEGER PRIMARY KEY
@@ -8,7 +8,7 @@ CREATE TABLE employee (
    email VARCHAR(100)
    birthday DATE);
 
-2. Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+--Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
 insert into MOCK_DATA (email, name, birthday) values ('thamshar0@blinklist.com', 'Thatch Hamshar', '1989-08-22');
 insert into MOCK_DATA (email, name, birthday) values ('jsmowton1@biblegateway.com', 'Jeanine Smowton', '1980-06-19');
@@ -61,7 +61,7 @@ insert into MOCK_DATA (email, name, birthday) values ('jchriston1b@ovh.net', 'Jo
 insert into MOCK_DATA (email, name, birthday) values ('tadacot1c@amazon.co.uk', 'Theodore Adacot', '1970-06-21');
 insert into MOCK_DATA (email, name, birthday) values ('hgofforth1d@nbcnews.com', 'Harry Gofforth', '1936-02-06');
 
-3. Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+--Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
 
 UPDATE employee
 	SET name = 'ahuha aa',
@@ -93,7 +93,7 @@ UPDATE employee
 	birthday = '1974-03-02'
 WHERE id = 25;
 
-4. Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+--Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 
 DELETE FROM employee
 WHERE id = 7;
